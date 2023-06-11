@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="electionsViewModel"
+            type="com.example.android.politicalpreparedness.election.ElectionsViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.politicalpreparedness.MainActivity">
+
+        <TextView
+            android:id="@+id/upcomingElectionsTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_8"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/upcoming_elections_header"
+            android:textSize="@dimen/text_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upcomingRV"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_0"
+            android:layout_marginHorizontal="@dimen/dimen_8"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/default_padding"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/savedElectionsTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upcomingElectionsTV"
+            app:rvListData="@{electionsViewModel.upcomingElections}" />
+
+
+        <ImageView
+            android:id="@+id/upcomingIV"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:civicsAPIStatus="@{electionsViewModel.civicAPIStatus}"
+            app:layout_constraintBottom_toBottomOf="@id/upcomingRV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/upcomingRV" />
+
+        <TextView
+            android:id="@+id/savedElectionsTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_8"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/saved_elections_header"
+            android:textSize="@dimen/text_20"
+            app:layout_constraintBottom_toTopOf="@id/savedRV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upcomingRV" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/savedRV"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_0"
+            android:layout_marginHorizontal="@dimen/dimen_8"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/default_padding"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/savedElectionsTV"
+            app:rvListData="@{electionsViewModel.savedElections}" />
+
+
+        <ProgressBar
+            android:id="@+id/savedStatusProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{electionsViewModel.isDBLoading() ? View.VISIBLE : View.GONE }"
+            app:layout_constraintBottom_toBottomOf="@id/savedRV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/savedRV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

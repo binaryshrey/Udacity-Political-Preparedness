@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.politicalpreparedness.MainActivity">
+
+        <ImageView
+            android:id="@+id/introBackgroundIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/intro"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/intro_bg" />
+
+        <ImageView
+            android:id="@+id/introIV"
+            android:layout_width="@dimen/dimen_64"
+            android:layout_height="@dimen/dimen_64"
+            android:layout_marginStart="@dimen/dimen_32"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/intro"
+            app:layout_constraintBottom_toTopOf="@+id/appNameTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ballot_logo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/upcomingButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_56"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginStart="@dimen/dimen_32"
+            android:layout_marginEnd="@dimen/dimen_32"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/elections_upcoming"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            app:cornerRadius="@dimen/dimen_32"
+            app:layout_constraintBottom_toTopOf="@+id/repButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="@dimen/dimen_2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/repButton"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_56"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginStart="@dimen/text_32"
+            android:layout_marginEnd="@dimen/text_32"
+            android:layout_marginBottom="@dimen/dimen_8"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/find_btn"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/text_32"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/appNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_32"
+            android:layout_marginBottom="@dimen/dimen_120"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Political\nPreparedness"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_24"
+            app:layout_constraintBottom_toTopOf="@+id/upcomingButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
