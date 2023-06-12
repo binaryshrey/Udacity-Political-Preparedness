@@ -19,7 +19,7 @@
 
         <TextView
             android:id="@+id/upcomingElectionsTV"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/dimen_8"
             android:layout_marginTop="@dimen/dimen_20"
@@ -51,8 +51,8 @@
 
         <ImageView
             android:id="@+id/upcomingIV"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/dimen_32"
+            android:layout_height="@dimen/dimen_32"
             app:civicsAPIStatus="@{electionsViewModel.civicAPIStatus}"
             app:layout_constraintBottom_toBottomOf="@id/upcomingRV"
             app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +61,7 @@
 
         <TextView
             android:id="@+id/savedElectionsTV"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/dimen_8"
             android:layout_marginTop="@dimen/dimen_20"

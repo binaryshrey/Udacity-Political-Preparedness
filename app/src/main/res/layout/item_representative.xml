@@ -13,13 +13,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="@dimen/dimen_16">
 
         <ImageView
             android:id="@+id/avatarIV"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_margin="4dp"
+            android:layout_width="@dimen/dimen_64"
+            android:layout_height="@dimen/dimen_64"
+            android:layout_margin="@dimen/dimen_4"
             android:contentDescription="@string/avatar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,45 +28,45 @@
 
         <TextView
             android:id="@+id/nameTV"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="4dp"
+            android:layout_marginHorizontal="@dimen/dimen_4"
             android:text="@{representative.office.name}"
-            android:textSize="16sp"
+            android:textSize="@dimen/dimen_16"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/avatarIV"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="President of the US" />
+            tools:text="@string/tools_name" />
 
         <TextView
             android:id="@+id/officialNameTV"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="4dp"
+            android:layout_marginHorizontal="@dimen/dimen_4"
             android:text="@{representative.official.name}"
             app:layout_constraintEnd_toStartOf="@id/webIV"
             app:layout_constraintStart_toEndOf="@id/avatarIV"
             app:layout_constraintTop_toBottomOf="@id/nameTV"
-            tools:text="Mike" />
+            tools:text="@string/tools_official_name" />
 
         <TextView
             android:id="@+id/partyNameTV"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="4dp"
+            android:layout_marginHorizontal="@dimen/dimen_4"
             android:text="@{representative.official.party}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/webIV"
             app:layout_constraintStart_toEndOf="@id/avatarIV"
             app:layout_constraintTop_toBottomOf="@id/officialNameTV"
-            tools:text="Party" />
+            tools:text="@string/tools_party_name" />
 
         <ImageView
             android:id="@+id/webIV"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="4dp"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:layout_marginEnd="@dimen/dimen_4"
             android:contentDescription="@string/website"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/fbIV"
@@ -75,9 +75,9 @@
 
         <ImageView
             android:id="@+id/fbIV"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="4dp"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:layout_marginEnd="@dimen/dimen_4"
             android:contentDescription="@string/fb"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/twitterIV"
@@ -86,9 +86,9 @@
 
         <ImageView
             android:id="@+id/twitterIV"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="4dp"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:layout_marginEnd="@dimen/dimen_4"
             android:contentDescription="@string/twitter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

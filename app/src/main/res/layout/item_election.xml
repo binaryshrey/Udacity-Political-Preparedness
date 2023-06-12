@@ -19,32 +19,32 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/dimen_8"
         android:onClick="@{() -> clickListener.onClick(election)}">
 
         <TextView
             android:id="@+id/electionNameTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
+            android:layout_marginHorizontal="@dimen/dimen_8"
             android:fontFamily="@font/open_sans_semibold"
             android:text="@{election.name}"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Election Name" />
+            tools:text="@string/tools_election_name" />
 
         <TextView
             android:id="@+id/dateTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginHorizontal="@dimen/dimen_8"
+            android:layout_marginBottom="@dimen/dimen_12"
             android:fontFamily="@font/open_sans"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/electionNameTV"
             app:setElectionDay="@{election.electionDay}"
-            tools:text="Wed Mar 20 01:01:01 PDT 2099" />
+            tools:text="@string/tools_date" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

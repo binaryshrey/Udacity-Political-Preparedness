@@ -27,4 +27,10 @@
     <string name="unfollow_button">unfollow election</string>
     <string name="follow_button">follow election</string>
     <string name="error_permission">To get representatives by using location, you need to enable location permission</string>
+    <string name="tools_name">President of the US</string>
+    <string name="tools_official_name">Mike</string>
+    <string name="tools_party_name">Party</string>
+    <string name="tools_election_name">Election Name</string>
+    <string name="tools_date">Wed Mar 20 01:01:01 PDT 2099</string>
+    <string name="tools_election_date">23 January 2999</string>
 </resources>
